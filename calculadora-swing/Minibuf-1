@@ -1,0 +1,86 @@
+[gbitd@void-live calculadora-swing]$ ls
+pom.xml  src  target
+[gbitd@void-live calculadora-swing]$ cd target/
+[gbitd@void-live target]$ ls
+calculadora-swing-1.0-SNAPSHOT.jar  generated-sources       maven-archiver  surefire-reports
+classes                             generated-test-sources  maven-status    test-classes
+[gbitd@void-live target]$ cd classes/
+[gbitd@void-live classes]$ ls
+com
+[gbitd@void-live classes]$ cd com/gbitd/projeto/
+[gbitd@void-live projeto]$ ls
+App.class
+[gbitd@void-live projeto]$ cd ../../..
+[gbitd@void-live classes]$ cd ..
+[gbitd@void-live target]$ cd ..
+[gbitd@void-live calculadora-swing]$ cd ..
+[gbitd@void-live MonitoriaPOO]$ git add .
+[gbitd@void-live MonitoriaPOO]$ git commit -m "Inicializando projeto: Calculadora gráfica usando Swing e modelo MVC"
+[main 8b3def3] Inicializando projeto: Calculadora gráfica usando Swing e modelo MVC
+ 31 files changed, 2336 insertions(+)
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/build.xml
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/build/built-jar.properties
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/build/classes/imc/Main.class
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/manifest.mf
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/nbproject/build-impl.xml
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/nbproject/genfiles.properties
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/nbproject/project.properties
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/nbproject/project.xml
+ create mode 100644 Excecao-Exercicio-02/IMC-Excecao/src/imc/Main.java
+ create mode 100644 calculadora-swing/.classpath
+ create mode 100644 calculadora-swing/.mvn/jvm.config
+ create mode 100644 calculadora-swing/.mvn/maven.config
+ create mode 100644 calculadora-swing/.project
+ create mode 100644 calculadora-swing/.projectile
+ create mode 100644 calculadora-swing/.settings/org.eclipse.core.resources.prefs
+ create mode 100644 calculadora-swing/.settings/org.eclipse.jdt.apt.core.prefs
+ create mode 100644 calculadora-swing/.settings/org.eclipse.jdt.core.prefs
+ create mode 100644 calculadora-swing/.settings/org.eclipse.m2e.core.prefs
+ create mode 100644 calculadora-swing/pom.xml
+ create mode 100644 calculadora-swing/src/main/java/com/gbitd/projeto/App.java
+ create mode 100644 calculadora-swing/src/test/java/com/gbitd/projeto/AppTest.java
+ create mode 100644 calculadora-swing/target/calculadora-swing-1.0-SNAPSHOT.jar
+ create mode 100644 calculadora-swing/target/classes/com/gbitd/projeto/App.class
+ create mode 100644 calculadora-swing/target/maven-archiver/pom.properties
+ create mode 100644 calculadora-swing/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+ create mode 100644 calculadora-swing/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+ create mode 100644 calculadora-swing/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+ create mode 100644 calculadora-swing/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+ create mode 100644 calculadora-swing/target/surefire-reports/TEST-com.gbitd.projeto.AppTest.xml
+ create mode 100644 calculadora-swing/target/surefire-reports/com.gbitd.projeto.AppTest.txt
+ create mode 100644 calculadora-swing/target/test-classes/com/gbitd/projeto/AppTest.class
+[gbitd@void-live MonitoriaPOO]$ git push origin main
+To github.com:gbitd/MonitoriaPOO.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:gbitd/MonitoriaPOO.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[gbitd@void-live MonitoriaPOO]$ git pull origin main
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 10 (delta 3), reused 6 (delta 1), pack-reused 0 (from 0)
+Unpacking objects: 100% (10/10), 80.08 KiB | 482.00 KiB/s, done.
+From github.com:gbitd/MonitoriaPOO
+ * branch            main       -> FETCH_HEAD
+   f991d1f..50a08ad  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+unificando branches dos dois computadores
+~
+~
+~
+~
+~
