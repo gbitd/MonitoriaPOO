@@ -1,7 +1,6 @@
 package com.gbitd.projeto.view;
 
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -62,6 +61,74 @@ public class CalculadoraView extends JFrame {
 
         setVisible(true);
 
+    }
+
+    public JTextField getVisor() {
+        return visor;
+    }
+
+    public JButton getBotaoSoma() {
+        return botaoSoma;
+    }
+
+    public JButton getBotaoSubtracao() {
+        return botaoSubtracao;
+    }
+
+    public JButton getBotaoMultiplicacao() {
+        return botaoMultiplicacao;
+    }
+
+    public JButton getBotaoDivisao() {
+        return botaoDivisao;
+    }
+
+    public JButton getBotao1() {
+        return botao1;
+    }
+
+    public JButton getBotao2() {
+        return botao2;
+    }
+
+    public JButton getBotao3() {
+        return botao3;
+    }
+
+    public JButton getBotao4() {
+        return botao4;
+    }
+
+    public JButton getBotao5() {
+        return botao5;
+    }
+
+    public JButton getBotao6() {
+        return botao6;
+    }
+
+    public JButton getBotao7() {
+        return botao7;
+    }
+
+    public JButton getBotao8() {
+        return botao8;
+    }
+
+    public JButton getBotao9() {
+        return botao9;
+    }
+
+    public JButton getBotao0() {
+        return botao0;
+    }
+
+    public JButton getBotaoIgualdade() {
+        return botaoIgualdade;
+    }
+
+    public JButton getBotaoVirgula() {
+        return botaoVirgula;
     }
 
 }
