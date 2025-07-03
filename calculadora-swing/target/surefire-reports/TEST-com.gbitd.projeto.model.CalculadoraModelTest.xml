@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="com.gbitd.projeto.AppTest" time="0.033" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.1" name="com.gbitd.projeto.model.CalculadoraModelTest" time="0.02" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -53,5 +53,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.gbitd.projeto.AppTest" time="0.015"/>
+  <testcase name="testMultiplicacaoNumerosNegativosePositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.003"/>
+  <testcase name="testSomaNumerosPositivoseNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.0"/>
+  <testcase name="testSubtracaoNumerosNegativosePositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.0"/>
+  <testcase name="testDivisaoNumerosNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.0"/>
+  <testcase name="testSubtracaoNumerosPositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testDivisaoNumerosPositivoseNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testSomaNumerosPositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testMultiplicacaoNumerosPositivoseNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testSubtracaoNumerosNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testSubtracaoNumerosPositivoseNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testSomaNumerosNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testMultiplicacaoNumerosPositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.0"/>
+  <testcase name="testSomaNumerosNegativosePositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testDivisaoNumerosNegativosePositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testMultiplicacaoNumerosNegativos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
+  <testcase name="testDivisaoNumerosPositivos" classname="com.gbitd.projeto.model.CalculadoraModelTest" time="0.001"/>
 </testsuite>
