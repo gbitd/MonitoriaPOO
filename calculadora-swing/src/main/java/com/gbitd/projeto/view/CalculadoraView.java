@@ -53,7 +53,7 @@ public class CalculadoraView extends JFrame {
         botaoMultiplicacao = new JButton("*");
         botaoDivisao = new JButton("/");
         botaoIgualdade = new JButton("=");
-        botaoVirgula = new JButton(",");
+        botaoVirgula = new JButton(".");
         visor = new JTextField();
 
         //Array de Jbutton para diminuir a repetição no código
@@ -100,7 +100,7 @@ public class CalculadoraView extends JFrame {
         botaoVirgula.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent){
-                    atualizaVisor(",");
+                    atualizaVisor(".");
                 }
             });
         botaoIgualdade.addActionListener(new ActionListener() {
