@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -36,31 +38,113 @@ public class CalculadoraView extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        add(visor = new JTextField(), BorderLayout.NORTH);
+        botao0 = new JButton("0");
+        botao1 = new JButton("1");
+        botao2 = new JButton("2");
+        botao3 = new JButton("3");
+        botao4 = new JButton("4");
+        botao5 = new JButton("5");
+        botao6 = new JButton("6");
+        botao7 = new JButton("7");
+        botao8 = new JButton("8");
+        botao9 = new JButton("9");
+        botaoSoma = new JButton("+");
+        botaoSubtracao = new JButton("-");
+        botaoMultiplicacao = new JButton("*");
+        botaoDivisao = new JButton("/");
+        botaoIgualdade = new JButton("=");
+        botaoVirgula = new JButton(",");
+        visor = new JTextField();
+
+        //Array de Jbutton para diminuir a repetição no código
+        JButton[] botoesNumericos = {
+            botao0, botao1, botao2, botao3, botao4,
+            botao5, botao6, botao7, botao8, botao9
+        };
+
+
+        //Configura botoes para atualizar visor
+        for (int i = 0; i < 10; i++) {
+            final String numero = String.valueOf(i);
+            botoesNumericos[i].addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent){
+                        atualizaVisor(numero);
+                    }
+                });
+        }
+        botaoSoma.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent){
+                    atualizaVisor("+");
+                }
+            });
+        botaoSubtracao.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent){
+                    atualizaVisor("-");
+                }
+            });
+        botaoMultiplicacao.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent){
+                    atualizaVisor("*");
+                }
+            });
+        botaoDivisao.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent){
+                    atualizaVisor("/");
+                }
+            });
+        botaoVirgula.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent){
+                    atualizaVisor(",");
+                }
+            });
+        botaoIgualdade.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent actionEvent){
+                    //Faz alguma coisa aí que será implementada no controller
+                }
+            });
+
+        //Adiciona o visor e o painel de botoes
+        //
+        add(visor, BorderLayout.NORTH);
 
         JPanel panelBotoes = new JPanel();
         panelBotoes.setLayout(new GridLayout(4, 4));
-        panelBotoes.add(botao7 = new JButton("7"));
-        panelBotoes.add(botao8 = new JButton("8"));
-        panelBotoes.add(botao9 = new JButton("9"));
-        panelBotoes.add(botaoSubtracao = new JButton("-"));
-        panelBotoes.add(botao4 = new JButton("4"));
-        panelBotoes.add(botao5 = new JButton("5"));
-        panelBotoes.add(botao6 = new JButton("6"));
-        panelBotoes.add(botaoSoma = new JButton("+"));
-        panelBotoes.add(botao1 = new JButton("1"));
-        panelBotoes.add(botao2 = new JButton("2"));
-        panelBotoes.add(botao3 = new JButton("3"));
-        panelBotoes.add(botaoDivisao = new JButton("/"));
-        panelBotoes.add(botao0 = new JButton("0"));
-        panelBotoes.add(botaoVirgula = new JButton(","));
-        panelBotoes.add(botaoIgualdade = new JButton("="));
-        panelBotoes.add(botaoMultiplicacao = new JButton("*"));
+        panelBotoes.add(botao7);
+        panelBotoes.add(botao8);
+        panelBotoes.add(botao9);
+        panelBotoes.add(botaoSubtracao);
+        panelBotoes.add(botao4);
+        panelBotoes.add(botao5);
+        panelBotoes.add(botao6);
+        panelBotoes.add(botaoSoma);
+        panelBotoes.add(botao1);
+        panelBotoes.add(botao2);
+        panelBotoes.add(botao3);
+        panelBotoes.add(botaoDivisao);
+        panelBotoes.add(botao0);
+        panelBotoes.add(botaoVirgula);
+        panelBotoes.add(botaoIgualdade);
+        panelBotoes.add(botaoMultiplicacao);
 
         add(panelBotoes, BorderLayout.CENTER);
 
         setVisible(true);
 
+    }
+
+    public void atualizaVisor(String texto){
+        visor.setText(visor.getText() + texto);
+    }
+
+    public String getTextoVisor(){
+        return visor.getText();
     }
 
     public JTextField getVisor() {
