@@ -13,10 +13,10 @@ Utiliza componentes **Swing** para interface gráfica, com modelo de delegação
 
 Este exercício é uma boa forma de trabalhar os princípios SOLID de programação orientada a objetos:
 * Single responsability principle 
-Toda classe e método deve ter apenas uma responsabilidade.
+  + Toda classe e método deve ter apenas uma responsabilidade.
 * Open-closed principle 
-Entidades abertas para extensão, mas fechadas para modificação
+  + Entidades abertas para extensão, mas fechadas para modificação
 * Liskov substitution principle
-Polimorfismo.
+  + Polimorfismo.
 * Interface segregation principle
-Desacoplamento.
+  + Desacoplamento.
