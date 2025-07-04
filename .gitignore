@@ -1,2 +1,25 @@
 /SwingTest/nbproject/private/
 /SwingTest/build/
+
+# Arquivos compilados
+*.class
+
+# Diretórios de build
+bin/
+target/
+out/
+build/
+
+# IDE específico
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Outros
+*.log
+*.jar
+*.war
+*.ear
+*.tmp
+*.bak
