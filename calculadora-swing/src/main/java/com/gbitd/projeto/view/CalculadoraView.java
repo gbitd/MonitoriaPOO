@@ -2,6 +2,7 @@ package com.gbitd.projeto.view;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
@@ -64,6 +65,8 @@ public class CalculadoraView extends JFrame {
 
 
         //Configura botoes para atualizar visor
+        //Esses eventos são tratados aqui porque tem apenas relação com a view
+        //Eventos que tem a ver com o modelo precisam ser tratados pelo controller
         for (int i = 0; i < 10; i++) {
             final String numero = String.valueOf(i);
             botoesNumericos[i].addActionListener(new ActionListener() {
@@ -103,12 +106,7 @@ public class CalculadoraView extends JFrame {
                     atualizaVisor(".");
                 }
             });
-        botaoIgualdade.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent actionEvent){
-                    //Faz alguma coisa aí que será implementada no controller
-                }
-            });
+
 
         //Adiciona o visor e o painel de botoes
         //
@@ -143,8 +141,16 @@ public class CalculadoraView extends JFrame {
         visor.setText(visor.getText() + texto);
     }
 
+    public void setTextoVisor(String texto){
+        visor.setText(texto);
+    }
+
     public String getTextoVisor(){
         return visor.getText();
+    }
+
+    public void mensagemErro(){
+        JOptionPane.showMessageDialog(null, "Algo deu errado, tente novamente!");
     }
 
     public JTextField getVisor() {
