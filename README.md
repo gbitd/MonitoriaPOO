@@ -9,7 +9,7 @@ Uma implementação de uma calculadora simples seguindo o padrão arquitetural M
 ![MVC](mvc.png)
 
 Utiliza componentes **Swing** para interface gráfica, com modelo de delegação de eventos.
-![Modelo de delegação de eventos](delegacao.png)
+![Modelo de delegação de eventos](delecacao.png)
 
 Este exercício é uma boa forma de trabalhar os princípios SOLID de programação orientada a objetos:
 * Single responsability principle 
