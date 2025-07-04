@@ -70,7 +70,8 @@ public class CalculadoraView extends JFrame {
         for (int i = 0; i < 10; i++) {
             final String numero = String.valueOf(i);
             botoesNumericos[i].addActionListener(new ActionListener() {
-                    @Override
+                    @Override // O Override garante que o método actionPerformed seja sobrescrito em tempo de compilação
+                              // Em caso de erro de digitação, ele acusa Erro: método não existe na superclasse
                     public void actionPerformed(ActionEvent actionEvent){
                         atualizaVisor(numero);
                     }
