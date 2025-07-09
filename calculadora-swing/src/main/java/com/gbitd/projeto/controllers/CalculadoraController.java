@@ -15,11 +15,11 @@ public class CalculadoraController {
     private CalculadoraModel model;
     private CalculadoraView view;
 
-
-    //Tratamento de evento para o botao igualdade deve ser tratado pelo controller, pois usa o model
     public CalculadoraController(CalculadoraModel model, CalculadoraView view){
         this.model = model;
         this.view = view;
+
+        //Tratamento de evento para o botao igualdade deve ser tratado pelo controller, pois usa o model
         view.getBotaoIgualdade().addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent actionEvent){
@@ -27,7 +27,6 @@ public class CalculadoraController {
                     exibeResultado();
                 }
             });
-
 
     }
 
