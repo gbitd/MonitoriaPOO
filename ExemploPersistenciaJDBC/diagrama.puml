@@ -1,0 +1,21 @@
+@startuml
+
+class Usuario {
+  - id: int
+  - nome: String
+  - email: String
+}
+
+class UsuarioDAO {
+  + salvar(usuario: Usuario)
+  + listarTodos(): List<Usuario>
+}
+
+class ConnectionFactory {
+  + getConnection(): Connection
+}
+
+UsuarioDAO --> ConnectionFactory : usa
+UsuarioDAO --> Usuario : manipula
+
+@enduml
