@@ -1,21 +1,29 @@
 @startuml
+!theme plain
+allowmixing
 
-class Usuario {
-  - id: int
-  - nome: String
-  - email: String
+package "view" {
+    class "MainClass" as MainClass
 }
 
-class UsuarioDAO {
-  + salvar(usuario: Usuario)
-  + listarTodos(): List<Usuario>
+package "DAO" {
+    class "DataSource" as DataSource
+    class "ClienteDAO" as ClienteDAO
 }
 
-class ConnectionFactory {
-  + getConnection(): Connection
+package "model" {
+    class "Cliente" as Cliente {
+        + nome: String
+        - void method()
+    }
 }
 
-UsuarioDAO --> ConnectionFactory : usa
-UsuarioDAO --> Usuario : manipula
+component "Banco de Dados" as BD <<Database>>
+
+MainClass --> DAO
+DAO --> DataSource
+DAO --> ClienteDAO
+ClienteDAO --> Cliente : usa
+DataSource --> BD : conecta\n(jdbc)
 
 @enduml
