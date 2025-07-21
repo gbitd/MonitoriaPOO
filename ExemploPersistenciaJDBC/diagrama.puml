@@ -1,29 +1,42 @@
 @startuml
 !theme plain
 allowmixing
+skinparam classAttributeIconSize 0
 
 package "view" {
     class "MainClass" as MainClass
 }
 
 package "DAO" {
-    class "DataSource" as DataSource
-    class "ClienteDAO" as ClienteDAO
+    class "DataSource" as DataSource{
+        - hostname: String
+        - port: int
+        - database: String
+        - username: String
+        - password: String
+        - connection: Connectionn
+        + getConnection(): Connection
+        + closeDataSource(): void
+    }
+    class "AlunoDAO" as AlunoDAO{
+        + readAll(): ArrayList<Aluno>
+    }
 }
 
 package "model" {
-    class "Cliente" as Cliente {
-        + nome: String
-        - void method()
+    class "Aluno" as Aluno {
+        - id: int
+        - nome: String
+        - email: String
+        - telefone: String
     }
 }
 
 component "Banco de Dados" as BD <<Database>>
 
-MainClass --> DAO
-DAO --> DataSource
-DAO --> ClienteDAO
-ClienteDAO --> Cliente : usa
-DataSource --> BD : conecta\n(jdbc)
+view ..> DAO
+DataSource ..> BD : conecta\n(jdbc)
+AlunoDAO ..> Aluno : usa
+AlunoDAO -->  DataSource : usa
 
 @enduml
